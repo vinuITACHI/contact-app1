@@ -5,19 +5,35 @@ export type ContactDocument = Contact & Document;
 
 @Schema()
 export class Contact {
-  @Prop()
+  @Prop({ type: Number, required: true })
   id: number;
 
-  @Prop()
+  @Prop({
+    type: String,
+    required: true,
+    match: /^[a-zA-Z\s]+$/,
+  })
   FirstName: string;
 
-  @Prop()
+  @Prop({
+    type: String,
+    required: true,
+    match: /^[a-zA-Z\s]+$/,
+  })
   LastName: string;
 
-  @Prop()
+  @Prop({
+    type: String,
+    required: true,
+    match: /^.+@.+\..+$/,
+  })
   Email: string;
 
-  @Prop()
+  @Prop({
+    type: String,
+    required: true,
+    match: /^[0-9]{10}$/,
+  })
   Phone: string;
 
   @Prop()
