@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
+    "start:frontend": "cd my-contact-app && npm start",
+    "start:backend": "cd contact && npm start"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/material": "^5.15.21",
+    "@mui/x-data-grid": "^7.9.0",
+    "react-infinite-scroll-component": "^6.1.0"
+  }
+}
